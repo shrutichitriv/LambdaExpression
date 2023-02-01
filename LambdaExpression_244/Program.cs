@@ -13,6 +13,7 @@ namespace LambdaExpression_244
             Retrieving_Record_ForAgeIs_LessThanEighteenAndGreaterThanThirteen(listPersonInCity);
             Retrieving_AverageAge(listPersonInCity);
             CheckNameIsPresent(listPersonInCity);
+            DisplayAgeGreaterThanSixty(listPersonInCity);
         }
 
         private static void AddRecords(List<Person> listPersonInCity)
@@ -60,6 +61,14 @@ namespace LambdaExpression_244
             else
             {
                 Console.WriteLine("Name is not present");
+            }
+        }
+
+        private static void DisplayAgeGreaterThanSixty(List<Person> listPersonInCity)
+        {
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age > 60)))
+            {
+                Console.WriteLine("Name : " + person.Name + "Age : " + person.Age);
             }
         }
 

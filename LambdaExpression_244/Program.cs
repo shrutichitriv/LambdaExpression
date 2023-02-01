@@ -11,7 +11,7 @@ namespace LambdaExpression_244
             AddRecords(listPersonInCity);
             Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(listPersonInCity);
             Retrieving_Record_ForAgeIs_LessThanEighteenAndGreaterThanThirteen(listPersonInCity);
-
+            Retrieving_AverageAge(listPersonInCity);
         }
 
         private static void AddRecords(List<Person> listPersonInCity)
@@ -40,6 +40,13 @@ namespace LambdaExpression_244
             {
                 Console.WriteLine("Name : " + person.Name + "Age : " + person.Age);
             }
+        }
+
+        private static void Retrieving_AverageAge(List<Person> listPersonInCity)
+        {
+            double avgAge = listPersonInCity.Average(x => x.Age);
+
+            Console.WriteLine(avgAge);
         }
 
 
